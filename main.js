@@ -81,6 +81,8 @@ const posts = [
 
 
 let postContainer = document.querySelector("#container");
+let likeButton = document.querySelector(".like-button");
+let likeCounter = 0;
 
 posts.forEach((post) => {
     postContainer.innerHTML += 
@@ -94,7 +96,7 @@ posts.forEach((post) => {
             </div>
             <div class="post-meta__data">
                 <div class="post-meta__author">${post.author.name}</div>
-                <div class="post-meta__time">4 mesi fa</div>
+                <div class="post-meta__time">${post.created}</div>
             </div>                    
         </div>
     </div>
@@ -111,10 +113,16 @@ posts.forEach((post) => {
                 </a>
             </div>
             <div class="likes__counter">
-                Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+                Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone
             </div>
         </div> 
     </div>            
 </div>`
 
+});
+
+
+likeButton.addEventListener("click", function (){
+    likeButton.classList.add("like-button--liked");
+    likeCounter++
 });
