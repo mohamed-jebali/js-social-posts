@@ -81,12 +81,11 @@ const posts = [
 
 
 let postContainer = document.querySelector("#container");
-let likeButton = document.querySelector(".like-button");
+let likePost = [];
 let likeCounter = 0;
 
 posts.forEach((post) => {
     postContainer.innerHTML += 
-
 
 `<div class="post">
     <div class="post__header">
@@ -121,8 +120,8 @@ posts.forEach((post) => {
 
 });
 
+let likeButton = document.querySelectorAll(".like-button");
 
 likeButton.addEventListener("click", function (){
     likeButton.classList.add("like-button--liked");
-    likeCounter++
 });
