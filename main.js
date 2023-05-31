@@ -120,8 +120,10 @@ posts.forEach((post) => {
 
 });
 
-let likeButton = document.querySelectorAll(".like-button");
+let likeButtons = document.querySelectorAll(".like-button");
 
-likeButton.addEventListener("click", function (){
+likeButtons.forEach((likeButton) => {
+  likeButton.addEventListener("click", function () {
     likeButton.classList.add("like-button--liked");
+  });
 });
