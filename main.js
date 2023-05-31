@@ -126,4 +126,5 @@ likeButtons.forEach((likeButton) => {
   likeButton.addEventListener("click", function () {
     likeButton.classList.add("like-button--liked");
   });
+  console.log(likeButton);
 });
