@@ -130,14 +130,14 @@ likeButtons.forEach((likeButton, index) => {
       counter ++;
       likeButton.classList.add("like-button--liked");
       likeCounters[index].innerHTML = counter;
-      likedPosts.push(counter ++);
+      likedPosts.push(posts.id);
     }
     else{
         counter --;
         likeButton.classList.remove("like-button--liked");
         likeCounters[index].innerHTML = counter;
+        likedPosts.pop(posts.id);
     }
   });
-  console.log(likedPosts);
 });
-
+console.log(likedPosts);
